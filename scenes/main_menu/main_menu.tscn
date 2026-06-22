@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cghaqwx71e5ln"]
+
+[ext_resource type="Script" uid="uid://byjme6ym742cq" path="res://scripts/main_menu/play_button.gd" id="1_0ebjn"]
+[ext_resource type="Script" uid="uid://cni86lq8jo31s" path="res://scripts/main_menu/licenses.gd" id="1_fsom3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b6gl"]
+bg_color = Color(0.27899078, 0.27899086, 0.27899072, 0.64705884)
+
+[node name="MainMenu" type="Node2D" unique_id=159842324]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=745719583]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=196339561]
+offset_right = 286.0
+offset_bottom = 60.0
+text = "play the game"
+script = ExtResource("1_0ebjn")
+
+[node name="Licenses" type="RichTextLabel" parent="CanvasLayer" unique_id=80129175]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -386.0
+offset_top = -400.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1b6gl")
+text = "LOADING LICENSES..."
+script = ExtResource("1_fsom3")

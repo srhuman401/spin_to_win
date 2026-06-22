@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cboulgtxmn4o"]
+
+[ext_resource type="PackedScene" uid="uid://bc4oqin5khmp0" path="res://scenes/chambers/level_test.tscn" id="1_p17hc"]
+[ext_resource type="PackedScene" uid="uid://tky6t1w4cwo3" path="res://scenes/game/puzzle/sun.tscn" id="2_qgbr3"]
+
+[node name="MainGame" type="Node2D" unique_id=925681269]
+
+[node name="BaseChamber" parent="." unique_id=656397598 instance=ExtResource("1_p17hc")]
+position = Vector2(550, 236)
+
+[node name="Sun" parent="BaseChamber" unique_id=1188553862 instance=ExtResource("2_qgbr3")]
+position = Vector2(-234, -127)

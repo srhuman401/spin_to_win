@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bc4oqin5khmp0"]
+
+[ext_resource type="PackedScene" uid="uid://5e0bn5vvyyxo" path="res://scenes/game/puzzle/base_chamber.tscn" id="1_kobc3"]
+[ext_resource type="PackedScene" uid="uid://3q7rax5afr58" path="res://scenes/game/puzzle/chamber_prefabs/wall.tscn" id="2_iamey"]
+
+[node name="BaseChamber" unique_id=656397598 instance=ExtResource("1_kobc3")]
+
+[node name="Wall2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="0" unique_id=295078828 instance=ExtResource("2_iamey")]
+position = Vector2(-288, 0)
+wall_height = 400.0
+
+[node name="Wall4" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="1" unique_id=1839173589 instance=ExtResource("2_iamey")]
+position = Vector2(0, 187.485)
+wall_width = 600.0
+wall_height = 25.0
+
+[node name="Wall5" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="2" unique_id=1923089030 instance=ExtResource("2_iamey")]
+position = Vector2(0, -187.36)
+wall_width = 600.0
+wall_height = 25.0
+
+[node name="Wall3" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="3" unique_id=1657263904 instance=ExtResource("2_iamey")]
+position = Vector2(288, 0)
+wall_height = 400.0

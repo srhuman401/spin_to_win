@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://tky6t1w4cwo3"]
+
+[ext_resource type="Texture2D" uid="uid://ct6a586xbevww" path="res://assets/textures/sunBall.png" id="1_t8vqu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3jvhr"]
+radius = 23.0
+
+[node name="Sun" type="RigidBody2D" unique_id=1188553862]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647633396]
+shape = SubResource("CircleShape2D_3jvhr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1920499265]
+position = Vector2(-9.536743e-07, 9.536743e-07)
+scale = Vector2(1.4140625, 1.4140625)
+texture = ExtResource("1_t8vqu")
