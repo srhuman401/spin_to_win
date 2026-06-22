@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://tky6t1w4cwo3"]
 
+[ext_resource type="Script" uid="uid://bs6sgf4gx5cvg" path="res://scripts/game/puzzle/sun.gd" id="1_ht5ey"]
 [ext_resource type="Texture2D" uid="uid://ct6a586xbevww" path="res://assets/textures/sunBall.png" id="1_t8vqu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3jvhr"]
 radius = 23.0
 
 [node name="Sun" type="RigidBody2D" unique_id=1188553862]
+continuous_cd = 1
+script = ExtResource("1_ht5ey")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647633396]
 shape = SubResource("CircleShape2D_3jvhr")

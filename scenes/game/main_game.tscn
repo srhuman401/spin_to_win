@@ -1,12 +1,40 @@
 [gd_scene format=3 uid="uid://cboulgtxmn4o"]
 
-[ext_resource type="PackedScene" uid="uid://bc4oqin5khmp0" path="res://scenes/chambers/level_test.tscn" id="1_p17hc"]
+[ext_resource type="Script" uid="uid://bip4pxr1054qb" path="res://scripts/game/game_controller.gd" id="1_7qhhq"]
 [ext_resource type="PackedScene" uid="uid://tky6t1w4cwo3" path="res://scenes/game/puzzle/sun.tscn" id="2_qgbr3"]
+[ext_resource type="Texture2D" uid="uid://qwfjffqfvvbi" path="res://assets/textures/crank.png" id="3_7qhhq"]
+[ext_resource type="Script" uid="uid://dc25upjy4oxwx" path="res://scripts/game/hand_crank.gd" id="4_noi7s"]
 
-[node name="MainGame" type="Node2D" unique_id=925681269]
+[node name="MainGame" type="Node2D" unique_id=925681269 node_paths=PackedStringArray("chamber_spawn")]
+script = ExtResource("1_7qhhq")
+sun_scene = ExtResource("2_qgbr3")
+chamber_spawn = NodePath("ChamberOrigin")
 
-[node name="BaseChamber" parent="." unique_id=656397598 instance=ExtResource("1_p17hc")]
-position = Vector2(550, 236)
+[node name="ChamberOrigin" type="Marker2D" parent="." unique_id=229245339]
+position = Vector2(576, 304.31)
 
-[node name="Sun" parent="BaseChamber" unique_id=1188553862 instance=ExtResource("2_qgbr3")]
-position = Vector2(-234, -127)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=557598464]
+
+[node name="HandCrank" type="TextureRect" parent="CanvasLayer" unique_id=2105027983 node_paths=PackedStringArray("controller")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -241.0
+offset_top = -241.0
+grow_horizontal = 0
+grow_vertical = 0
+rotation = -6.2831855
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("3_7qhhq")
+script = ExtResource("4_noi7s")
+controller = NodePath("../..")
+
+[node name="DebugSpeed" type="Label" parent="CanvasLayer/HandCrank" unique_id=809163996]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 21
+text = "speed 0.0"

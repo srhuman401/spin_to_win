@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://5e0bn5vvyyxo"]
 
 [ext_resource type="Script" uid="uid://dpmatobbfldi" path="res://scripts/game/puzzle/chamber.gd" id="1_gic5m"]
+[ext_resource type="Script" uid="uid://c4cgxuqw3305p" path="res://scripts/game/puzzle/exit.gd" id="2_l13sm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gic5m"]
+size = Vector2(82, 90)
 
 [node name="BaseChamber" type="Node2D" unique_id=656397598 node_paths=PackedStringArray("rotating_root", "sun_spawn")]
 script = ExtResource("1_gic5m")
@@ -12,11 +14,12 @@ metadata/_custom_type_script = "uid://dpmatobbfldi"
 
 [node name="Geometry" type="Node2D" parent="." unique_id=191963552]
 
-[node name="Start" type="Marker2D" parent="." unique_id=424284006]
+[node name="Exit" type="Area2D" parent="Geometry" unique_id=889368385]
+script = ExtResource("2_l13sm")
 
-[node name="Exit" type="Area2D" parent="." unique_id=889368385]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=181762499]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Exit" unique_id=181762499]
 shape = SubResource("RectangleShape2D_gic5m")
+
+[node name="Start" type="Marker2D" parent="." unique_id=424284006]
 
 [node name="Interactions" type="Node2D" parent="." unique_id=973425998]

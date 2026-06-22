@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://hay2u17qlf17"]
+
+[ext_resource type="Script" uid="uid://dp6mku6c56ivy" path="res://scripts/game/puzzle/logic/door.gd" id="1_evmls"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_evmls"]
+load_path = "res://.godot/imported/testWall.png-ee7eacc83eb902b7f59e5fe30b0c7c35.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evmls"]
+size = Vector2(24, 92)
+
+[node name="Door" type="Node2D" unique_id=2067857713 node_paths=PackedStringArray("collider", "collision_shape", "sprite")]
+script = ExtResource("1_evmls")
+collider = NodePath("StaticBody2D")
+collision_shape = NodePath("StaticBody2D/CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://dp6mku6c56ivy"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=905984449]
+self_modulate = Color(0.51007515, 0.51007515, 0.51007503, 1)
+scale = Vector2(0.7890625, 2.90625)
+texture = SubResource("CompressedTexture2D_evmls")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1957169268]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=925205704]
+shape = SubResource("RectangleShape2D_evmls")

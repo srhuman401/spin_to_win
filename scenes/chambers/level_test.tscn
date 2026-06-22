@@ -1,24 +1,51 @@
 [gd_scene format=3 uid="uid://bc4oqin5khmp0"]
 
 [ext_resource type="PackedScene" uid="uid://5e0bn5vvyyxo" path="res://scenes/game/puzzle/base_chamber.tscn" id="1_kobc3"]
+[ext_resource type="PackedScene" uid="uid://hay2u17qlf17" path="res://scenes/game/puzzle/chamber_prefabs/door.tscn" id="2_epoms"]
 [ext_resource type="PackedScene" uid="uid://3q7rax5afr58" path="res://scenes/game/puzzle/chamber_prefabs/wall.tscn" id="2_iamey"]
 
 [node name="BaseChamber" unique_id=656397598 instance=ExtResource("1_kobc3")]
 
-[node name="Wall2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="0" unique_id=295078828 instance=ExtResource("2_iamey")]
+[node name="Door" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="0" unique_id=2067857713 instance=ExtResource("2_epoms")]
+position = Vector2(143, -150)
+start_open = true
+
+[node name="Wall2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="1" unique_id=295078828 instance=ExtResource("2_iamey")]
 position = Vector2(-288, 0)
 wall_height = 400.0
 
-[node name="Wall4" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="1" unique_id=1839173589 instance=ExtResource("2_iamey")]
+[node name="Wall4" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="2" unique_id=1839173589 instance=ExtResource("2_iamey")]
 position = Vector2(0, 187.485)
 wall_width = 600.0
 wall_height = 25.0
 
-[node name="Wall5" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="2" unique_id=1923089030 instance=ExtResource("2_iamey")]
+[node name="Wall5" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="3" unique_id=1923089030 instance=ExtResource("2_iamey")]
 position = Vector2(0, -187.36)
 wall_width = 600.0
 wall_height = 25.0
 
-[node name="Wall3" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="3" unique_id=1657263904 instance=ExtResource("2_iamey")]
-position = Vector2(288, 0)
-wall_height = 400.0
+[node name="Wall6" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="4" unique_id=1449701057 instance=ExtResource("2_iamey")]
+position = Vector2(-49, -108)
+wall_width = 491.815
+wall_height = 25.0
+
+[node name="Wall7" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="5" unique_id=568214142 instance=ExtResource("2_iamey")]
+position = Vector2(50, -23)
+wall_width = 491.815
+wall_height = 25.0
+
+[node name="Wall3" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="6" unique_id=1657263904 instance=ExtResource("2_iamey")]
+position = Vector2(288, -46.855)
+wall_width = 24.005
+wall_height = 293.56
+
+[node name="Wall8" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="7" unique_id=240955247 instance=ExtResource("2_iamey")]
+position = Vector2(-186, 125)
+wall_width = 24.005
+wall_height = 143.7
+
+[node name="Exit" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="8" unique_id=889368385]
+position = Vector2(341.25, 135.985)
+
+[node name="Start" parent="." index="1" unique_id=424284006]
+position = Vector2(-249, -149)

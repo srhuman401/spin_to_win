@@ -16,12 +16,17 @@ run/main_scene="uid://cghaqwx71e5ln"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameMgr="*uid://cjyia0agjujt7"
+
 [display]
 
 window/stretch/mode="canvas_items"
 
 [physics]
 
+common/physics_ticks_per_second=120
 3d/physics_engine="Jolt Physics"
 
 [rendering]
