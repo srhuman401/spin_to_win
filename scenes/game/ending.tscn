@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://tndl0sbobdvf"]
+
+[node name="Ending" type="Node2D" unique_id=1920389951]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1517355337]
+offset_right = 1179.0
+offset_bottom = 664.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1466056861]
+offset_left = 25.0
+offset_top = 175.0
+offset_right = 1148.0
+offset_bottom = 286.0
+theme_override_font_sizes/font_size = 39
+text = "CONGRATULATIONS
+YOU SAVED EARTH AND WERE FOREVER KNOWN AS A HERO."

@@ -6,10 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gic5m"]
 size = Vector2(82, 90)
 
-[node name="BaseChamber" type="Node2D" unique_id=656397598 node_paths=PackedStringArray("rotating_root", "sun_spawn")]
+[node name="BaseChamber" type="Node2D" unique_id=656397598 node_paths=PackedStringArray("rotating_root", "sun_spawn", "exit_trigger")]
 script = ExtResource("1_gic5m")
 rotating_root = NodePath("Geometry")
 sun_spawn = NodePath("Start")
+exit_trigger = NodePath("Geometry/Exit")
 metadata/_custom_type_script = "uid://dpmatobbfldi"
 
 [node name="Geometry" type="Node2D" parent="." unique_id=191963552]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ol8jqw2lftyg"]
+
+[ext_resource type="PackedScene" uid="uid://n0m7ioejta83" path="res://scenes/cutscenes/base.tscn" id="1_4e4xo"]
+[ext_resource type="PackedScene" uid="uid://2dwixrvpwldu" path="res://scenes/cutscenes/dialog_box.tscn" id="2_rdbwf"]
+
+[node name="Base" unique_id=481378867 instance=ExtResource("1_4e4xo")]
+
+[node name="DialogBox2" parent="." index="1" unique_id=1224712469 instance=ExtResource("2_rdbwf")]
+offset_left = 31.0
+offset_top = 36.0
+offset_right = 1123.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 54
+text = "EVERYONE IS RELYING ON YOU, SON.
+TO SAVE EARTH FROM THE SPINNING SUN"
+
+[node name="DialogBox3" parent="." index="2" unique_id=21925218 instance=ExtResource("2_rdbwf")]
+offset_left = 28.0
+offset_top = 251.0
+offset_right = 665.0
+offset_bottom = 331.0
+theme_override_font_sizes/font_size = 54
+text = "I KNOW YOU CAN DO IT."
+
+[node name="DialogBox4" parent="." index="3" unique_id=1266707971 instance=ExtResource("2_rdbwf")]
+offset_left = 457.0
+offset_top = 418.0
+offset_right = 1094.0
+offset_bottom = 498.0
+theme_override_font_sizes/font_size = 54
+text = "GOOD LUCK, SON."

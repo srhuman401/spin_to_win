@@ -1,0 +1,251 @@
+[gd_scene format=3 uid="uid://bwqxusnr40iiq"]
+
+[ext_resource type="PackedScene" uid="uid://5e0bn5vvyyxo" path="res://scenes/game/puzzle/base_chamber.tscn" id="1_u5exx"]
+[ext_resource type="PackedScene" uid="uid://hay2u17qlf17" path="res://scenes/game/puzzle/chamber_prefabs/door.tscn" id="2_3ki1s"]
+[ext_resource type="PackedScene" uid="uid://3q7rax5afr58" path="res://scenes/game/puzzle/chamber_prefabs/wall.tscn" id="2_ql035"]
+[ext_resource type="PackedScene" uid="uid://djt672dtlbp3p" path="res://scenes/game/puzzle/chamber_prefabs/ball.tscn" id="4_3ki1s"]
+[ext_resource type="PackedScene" uid="uid://ckjjdebfomytb" path="res://scenes/game/puzzle/chamber_prefabs/button.tscn" id="4_j47kd"]
+[ext_resource type="PackedScene" uid="uid://dnabrab5fw3h8" path="res://scenes/game/puzzle/chamber_prefabs/light.tscn" id="5_gfwlw"]
+[ext_resource type="Script" uid="uid://dqvsvvoqmni5u" path="res://scripts/game/puzzle/logic/and_gate.gd" id="6_216i0"]
+[ext_resource type="Script" uid="uid://cl4vyrlli4b4s" path="res://scripts/game/puzzle/automate_add_connections.gd" id="8_7mij4"]
+
+[node name="BaseChamber" unique_id=656397598 instance=ExtResource("1_u5exx")]
+
+[node name="P_Door2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="0" unique_id=2067857713 instance=ExtResource("2_3ki1s")]
+position = Vector2(-156, -124.99999)
+rotation = 1.5707964
+scale = Vector2(0.445, 1)
+
+[node name="P_Door3" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="1" unique_id=263111744 instance=ExtResource("2_3ki1s")]
+position = Vector2(-250, -125)
+rotation = 1.5707964
+scale = Vector2(0.445, 1)
+
+[node name="ExitDoor" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="2" unique_id=587692908 instance=ExtResource("2_3ki1s")]
+position = Vector2(-10, 134)
+
+[node name="P_Enter" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="3" unique_id=1013486943 instance=ExtResource("2_3ki1s")]
+position = Vector2(-52, 65)
+rotation = 1.5707964
+scale = Vector2(0.615, 1)
+
+[node name="2_Door2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="4" unique_id=1177007648 instance=ExtResource("2_3ki1s")]
+position = Vector2(23, 9)
+rotation = 1.5707964
+scale = Vector2(0.615, 1)
+
+[node name="2_RoomD1" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="5" unique_id=923444700 instance=ExtResource("2_3ki1s")]
+position = Vector2(204, -93)
+scale = Vector2(0.895, 1)
+
+[node name="2_RoomD2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="6" unique_id=1238539139 instance=ExtResource("2_3ki1s")]
+position = Vector2(204, -93)
+scale = Vector2(0.895, 1)
+start_open = true
+
+[node name="P_DoorREd" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="7" unique_id=1600233482 groups=["red"] instance=ExtResource("2_3ki1s")]
+position = Vector2(-150, -17.000004)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.65)
+color = Color(1, 0, 0, 1)
+
+[node name="P_DoorREd3" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="8" unique_id=1647488788 groups=["red"] instance=ExtResource("2_3ki1s")]
+position = Vector2(-255, -80)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.65)
+color = Color(1, 0, 0, 1)
+
+[node name="P_DoorREd2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="9" unique_id=1170555810 groups=["red"] instance=ExtResource("2_3ki1s")]
+position = Vector2(-207, 28)
+scale = Vector2(0.3, 0.65)
+color = Color(1, 0, 0, 1)
+
+[node name="P_DoorBlue4" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="10" unique_id=2135576232 groups=["blue"] instance=ExtResource("2_3ki1s")]
+position = Vector2(-155, -78)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.65)
+color = Color(0.4117647, 1, 1, 1)
+
+[node name="P_DoorBlue5" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="11" unique_id=1085197728 groups=["blue"] instance=ExtResource("2_3ki1s")]
+position = Vector2(-256, -15)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.65)
+color = Color(0.4117647, 1, 1, 1)
+
+[node name="Wall2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="12" unique_id=295078828 instance=ExtResource("2_ql035")]
+position = Vector2(-288, 0)
+wall_height = 400.0
+
+[node name="Wall4" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="13" unique_id=1839173589 instance=ExtResource("2_ql035")]
+position = Vector2(0, 187.485)
+wall_width = 600.0
+wall_height = 25.0
+
+[node name="Wall6" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="14" unique_id=1449701057 instance=ExtResource("2_ql035")]
+position = Vector2(149, 87)
+wall_width = 300.0
+wall_height = 25.58
+
+[node name="Wall8" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="15" unique_id=1113522343 instance=ExtResource("2_ql035")]
+position = Vector2(-187, 65)
+wall_width = 215.415
+wall_height = 17.73
+
+[node name="Wall10" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="16" unique_id=1001977912 instance=ExtResource("2_ql035")]
+position = Vector2(-104, -26)
+rotation = 1.5707964
+wall_width = 199.825
+wall_height = 48.675
+
+[node name="Wall18" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="17" unique_id=1556688663 instance=ExtResource("2_ql035")]
+position = Vector2(-205, -57)
+rotation = 1.5707964
+wall_width = 132.09
+wall_height = 50.78
+
+[node name="Wall11" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="18" unique_id=56489405 instance=ExtResource("2_ql035")]
+position = Vector2(-104, -125)
+wall_width = 49.4
+wall_height = 12.76
+
+[node name="Wall12" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="19" unique_id=1734950483 instance=ExtResource("2_ql035")]
+position = Vector2(-205, -125)
+wall_width = 50.87
+wall_height = 12.76
+
+[node name="Wall13" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="20" unique_id=570236221 instance=ExtResource("2_ql035")]
+position = Vector2(-226, -157)
+rotation = 1.5707964
+wall_width = 75.39
+wall_height = 8.805
+
+[node name="Wall9" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="21" unique_id=1320345707 instance=ExtResource("2_ql035")]
+position = Vector2(170, 9)
+wall_width = 215.415
+wall_height = 17.73
+
+[node name="Wall14" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="22" unique_id=114893647 instance=ExtResource("2_ql035")]
+position = Vector2(200, -53)
+wall_width = 179.495
+wall_height = 17.73
+
+[node name="Wall17" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="23" unique_id=1650087861 instance=ExtResource("2_ql035")]
+position = Vector2(151, -60)
+wall_width = 179.495
+wall_height = 3.79
+
+[node name="Wall15" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="24" unique_id=1755186367 instance=ExtResource("2_ql035")]
+position = Vector2(120, -21)
+wall_width = 19.475
+wall_height = 51.395
+
+[node name="Wall5" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="25" unique_id=1923089030 instance=ExtResource("2_ql035")]
+position = Vector2(0, -195)
+wall_width = 600.0
+wall_height = 11.82
+
+[node name="Wall3" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="26" unique_id=1657263904 instance=ExtResource("2_ql035")]
+position = Vector2(288, -46.855)
+wall_width = 24.005
+wall_height = 293.56
+
+[node name="Wall16" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="27" unique_id=254426364 instance=ExtResource("2_ql035")]
+position = Vector2(204, -157)
+wall_width = 22.13
+wall_height = 80.005
+
+[node name="Wall7" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="28" unique_id=1328483377 instance=ExtResource("2_ql035")]
+position = Vector2(-12, -47)
+wall_width = 24.005
+wall_height = 293.56
+
+[node name="Exit" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="29" unique_id=889368385]
+position = Vector2(341.25, 135.985)
+
+[node name="2_OpenP_Enter" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="30" unique_id=2066081425 node_paths=PackedStringArray("connections") instance=ExtResource("4_j47kd")]
+position = Vector2(26, 45)
+rotation = 1.5707964
+button_triggerable_ids = Array[String](["2"])
+button_permanent = true
+connections = [NodePath("../P_Enter")]
+
+[node name="2_OpenP_Enter2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="31" unique_id=1134911071 node_paths=PackedStringArray("connections") instance=ExtResource("4_j47kd")]
+position = Vector2(86, -26)
+button_triggerable_ids = Array[String](["2"])
+connections = [NodePath("../Light2"), NodePath("../../Interactions/2_P_Door2ANDGate")]
+
+[node name="2_OpenP_Enter4" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="32" unique_id=99308110 node_paths=PackedStringArray("connections") instance=ExtResource("4_j47kd")]
+position = Vector2(251, -88)
+rotation = -1.5707964
+button_triggerable_ids = Array[String](["2"])
+button_permanent = true
+connections = [NodePath("../2_RoomD2"), NodePath("../P_Door3")]
+
+[node name="2_OpenP_Enter5" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="33" unique_id=666208438 instance=ExtResource("4_j47kd")]
+position = Vector2(244, -88)
+button_color = Color(0, 1, 1, 1)
+button_triggerable_ids = Array[String](["2"])
+
+[node name="2_OpenP_Enter6" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="34" unique_id=763259379 instance=ExtResource("4_j47kd")]
+position = Vector2(241, -156)
+rotation = 1.5707964
+button_color = Color(1, 0, 0, 1)
+button_triggerable_ids = Array[String](["2"])
+
+[node name="2_OpenP_Enter3" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="35" unique_id=1357150827 node_paths=PackedStringArray("connections") instance=ExtResource("4_j47kd")]
+position = Vector2(250, -21)
+rotation = -1.5707964
+button_color = Color(1, 1, 0, 1)
+button_triggerable_ids = Array[String](["yel"])
+connections = [NodePath("../Light2"), NodePath("../../Interactions/2_P_Door2ANDGate")]
+
+[node name="P_OpenDoor2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="36" unique_id=1034995707 node_paths=PackedStringArray("connections") instance=ExtResource("4_j47kd")]
+position = Vector2(-195, -161)
+rotation = 1.5707964
+connections = [NodePath("../2_Door2")]
+
+[node name="P_OpenDoor3" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="37" unique_id=716093635 node_paths=PackedStringArray("connections") instance=ExtResource("4_j47kd")]
+position = Vector2(-252, -162)
+rotation = 3.1415927
+button_permanent = true
+connections = [NodePath("../ExitDoor")]
+
+[node name="Light" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="38" unique_id=2065566055 instance=ExtResource("5_gfwlw")]
+position = Vector2(-186, -124.99999)
+scale = Vector2(0.7, 0.7)
+
+[node name="Light2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="39" unique_id=1457952866 instance=ExtResource("5_gfwlw")]
+position = Vector2(-198, -125)
+scale = Vector2(0.7, 0.7)
+
+[node name="Start" parent="." index="1" unique_id=424284006]
+position = Vector2(-244, 132)
+
+[node name="Ball" parent="Interactions" parent_id_path=PackedInt32Array(973425998) index="0" unique_id=797243969 instance=ExtResource("4_3ki1s")]
+position = Vector2(242, 47)
+id = "2"
+color = Color(0.7541783, 0.835967, 0.99273056, 1)
+
+[node name="Ball2" parent="Interactions" parent_id_path=PackedInt32Array(973425998) index="1" unique_id=1596681428 instance=ExtResource("4_3ki1s")]
+position = Vector2(156, -26)
+id = "yel"
+color = Color(1, 0.9372549, 0, 1)
+
+[node name="2_P_Door2ANDGate" type="Node2D" parent="Interactions" parent_id_path=PackedInt32Array(973425998) index="2" unique_id=1181738024 node_paths=PackedStringArray("buttons_to_lock", "connections")]
+script = ExtResource("6_216i0")
+permanent_trigger = true
+buttons_to_lock = [NodePath("../../Geometry/P_OpenDoor2"), NodePath("../../Geometry/P_OpenDoor3")]
+connections = [NodePath("../../Geometry/P_Door2"), NodePath("../../Geometry/2_RoomD1")]
+metadata/_custom_type_script = "uid://dqvsvvoqmni5u"
+
+[node name="PuzzleAutomateConnectionsToLogicActivator" type="Node" parent="Interactions" parent_id_path=PackedInt32Array(973425998) index="3" unique_id=988399030 node_paths=PackedStringArray("target")]
+script = ExtResource("8_7mij4")
+group_name = "red"
+target = NodePath("../../Geometry/2_OpenP_Enter6")
+metadata/_custom_type_script = "uid://cl4vyrlli4b4s"
+
+[node name="PuzzleAutomateConnectionsToLogicActivator2" type="Node" parent="Interactions" parent_id_path=PackedInt32Array(973425998) index="4" unique_id=1736075529 node_paths=PackedStringArray("target")]
+script = ExtResource("8_7mij4")
+group_name = "blue"
+target = NodePath("../../Geometry/2_OpenP_Enter5")
+metadata/_custom_type_script = "uid://cl4vyrlli4b4s"

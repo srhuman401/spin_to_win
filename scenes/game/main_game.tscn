@@ -3,12 +3,19 @@
 [ext_resource type="Script" uid="uid://bip4pxr1054qb" path="res://scripts/game/game_controller.gd" id="1_7qhhq"]
 [ext_resource type="PackedScene" uid="uid://tky6t1w4cwo3" path="res://scenes/game/puzzle/sun.tscn" id="2_qgbr3"]
 [ext_resource type="Texture2D" uid="uid://qwfjffqfvvbi" path="res://assets/textures/crank.png" id="3_7qhhq"]
+[ext_resource type="Script" uid="uid://dw3utwopi0anc" path="res://scripts/game/cutscene/cutscene_player.gd" id="3_11nld"]
 [ext_resource type="Script" uid="uid://dc25upjy4oxwx" path="res://scripts/game/hand_crank.gd" id="4_noi7s"]
+[ext_resource type="Resource" uid="uid://82k0bt6c6oa4" path="res://data/cut_intro.tres" id="4_qsdf0"]
+[ext_resource type="Texture2D" uid="uid://bs3xvmcn0t5sb" path="res://assets/textures/retry.png" id="5_p2514"]
+[ext_resource type="Script" uid="uid://bfolls84xbktj" path="res://scripts/game/retry_button.gd" id="6_rpywg"]
+[ext_resource type="Texture2D" uid="uid://swa7gr6xljx1" path="res://assets/textures/bg.png" id="7_ef7fl"]
 
-[node name="MainGame" type="Node2D" unique_id=925681269 node_paths=PackedStringArray("chamber_spawn")]
+[node name="MainGame" type="Node2D" unique_id=925681269 node_paths=PackedStringArray("chamber_spawn", "intro_cutscene", "gui")]
 script = ExtResource("1_7qhhq")
 sun_scene = ExtResource("2_qgbr3")
 chamber_spawn = NodePath("ChamberOrigin")
+intro_cutscene = NodePath("CutscenePlayer")
+gui = NodePath("CanvasLayer")
 
 [node name="ChamberOrigin" type="Marker2D" parent="." unique_id=229245339]
 position = Vector2(576, 304.31)
@@ -21,8 +28,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -241.0
-offset_top = -241.0
+offset_left = -234.17249
+offset_top = -220.73047
+offset_right = -33.113037
+offset_bottom = -28.690063
 grow_horizontal = 0
 grow_vertical = 0
 rotation = -6.2831855
@@ -38,3 +47,29 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 21
 text = "speed 0.0"
+
+[node name="RetryButton" type="Button" parent="CanvasLayer" unique_id=193016507 node_paths=PackedStringArray("controller")]
+offset_right = 66.0
+offset_bottom = 66.0
+icon = ExtResource("5_p2514")
+expand_icon = true
+script = ExtResource("6_rpywg")
+controller = NodePath("../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=537518712]
+self_modulate = Color(0.41568628, 0.41568628, 0.41568628, 0.44705883)
+position = Vector2(572.5, 320.5)
+scale = Vector2(1.0164931, 1.0354939)
+texture = ExtResource("7_ef7fl")
+
+[node name="CutscenePlayer" type="Node2D" parent="." unique_id=684276443 node_paths=PackedStringArray("dialog_box")]
+script = ExtResource("3_11nld")
+cutscene_to_play = ExtResource("4_qsdf0")
+dialog_box = NodePath("Label")
+metadata/_custom_type_script = "uid://dw3utwopi0anc"
+
+[node name="Label" type="Label" parent="CutscenePlayer" unique_id=2145908144]
+offset_left = -118.0
+offset_top = -27.0
+offset_right = -27.0
+offset_bottom = -4.0

@@ -6,9 +6,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_3jvhr"]
 radius = 23.0
 
-[node name="Sun" type="RigidBody2D" unique_id=1188553862]
+[node name="Sun" type="RigidBody2D" unique_id=1188553862 node_paths=PackedStringArray("sprite", "collider")]
 continuous_cd = 1
 script = ExtResource("1_ht5ey")
+id = "sun"
+sprite = NodePath("Sprite2D")
+collider = NodePath("CollisionShape2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647633396]
 shape = SubResource("CircleShape2D_3jvhr")

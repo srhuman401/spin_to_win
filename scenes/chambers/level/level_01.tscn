@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bg6bpxs4tj2bx"]
+
+[ext_resource type="PackedScene" uid="uid://5e0bn5vvyyxo" path="res://scenes/game/puzzle/base_chamber.tscn" id="1_3ry0p"]
+[ext_resource type="PackedScene" uid="uid://3q7rax5afr58" path="res://scenes/game/puzzle/chamber_prefabs/wall.tscn" id="3_uhuub"]
+
+[node name="BaseChamber" unique_id=656397598 instance=ExtResource("1_3ry0p")]
+
+[node name="Wall2" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="0" unique_id=295078828 instance=ExtResource("3_uhuub")]
+position = Vector2(-288, 0)
+wall_height = 400.0
+
+[node name="Wall4" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="1" unique_id=1839173589 instance=ExtResource("3_uhuub")]
+position = Vector2(0, 187.485)
+wall_width = 600.0
+wall_height = 25.0
+
+[node name="Wall5" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="2" unique_id=1923089030 instance=ExtResource("3_uhuub")]
+position = Vector2(0, -187.36)
+wall_width = 600.0
+wall_height = 25.0
+
+[node name="Wall6" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="3" unique_id=1449701057 instance=ExtResource("3_uhuub")]
+position = Vector2(52, -82)
+wall_width = 491.815
+wall_height = 25.0
+
+[node name="Wall3" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="4" unique_id=1657263904 instance=ExtResource("3_uhuub")]
+position = Vector2(288, -46.855)
+wall_width = 24.005
+wall_height = 293.56
+
+[node name="Exit" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="5" unique_id=889368385]
+position = Vector2(341.25, 135.985)
+
+[node name="Label" type="Label" parent="Geometry" parent_id_path=PackedInt32Array(191963552) index="6" unique_id=500173811]
+offset_left = -160.0
+offset_top = -62.0
+offset_right = 242.0
+offset_bottom = -22.0
+text = "Spin the valve with your mouse to rotate the level
+(The faster you rotate the faster the level spins)"
+
+[node name="Start" parent="." index="1" unique_id=424284006]
+position = Vector2(210, -134)

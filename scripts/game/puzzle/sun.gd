@@ -1,5 +1,5 @@
 class_name PuzzleSun
-extends RigidBody2D
+extends PuzzlePhysicsBall
 
 func _ready():
 	pass

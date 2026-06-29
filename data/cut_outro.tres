@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CutsceneData" format=3 uid="uid://dsgfcomq4v2d0"]
+
+[ext_resource type="Script" uid="uid://bs0g7243nji7j" path="res://scripts/resource/cutscene/cutscene_frame.gd" id="1_13u8b"]
+[ext_resource type="Script" uid="uid://b4ispbpne3wnv" path="res://scripts/resource/cutscene/cutscene_data.gd" id="2_o2xnc"]
+
+[resource]
+script = ExtResource("2_o2xnc")
+metadata/_custom_type_script = "uid://b4ispbpne3wnv"

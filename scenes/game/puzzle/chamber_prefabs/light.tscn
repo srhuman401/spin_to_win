@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dnabrab5fw3h8"]
+
+[ext_resource type="Texture2D" uid="uid://cqqdyatyukq8l" path="res://assets/textures/box.png" id="1_3reru"]
+[ext_resource type="Script" uid="uid://dvfr2fxs4y6wx" path="res://scripts/game/puzzle/logic/light.gd" id="1_qevfv"]
+
+[node name="Light" type="Node2D" unique_id=2065566055 node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_qevfv")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://dvfr2fxs4y6wx"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=405184213]
+self_modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_3reru")

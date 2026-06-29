@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://djt672dtlbp3p"]
+
+[ext_resource type="Script" uid="uid://crbyxy0dcb1fy" path="res://scripts/game/puzzle/ball.gd" id="1_b66yr"]
+[ext_resource type="Texture2D" uid="uid://c5uiw6cab64lq" path="res://assets/textures/physicsBall.png" id="2_b66yr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bmbfq"]
+radius = 18.0
+
+[node name="Ball" type="RigidBody2D" unique_id=797243969 node_paths=PackedStringArray("sprite", "collider")]
+continuous_cd = 2
+script = ExtResource("1_b66yr")
+color = Color(0.20133334, 0.4209078, 0.9187764, 1)
+sprite = NodePath("Sprite2D")
+collider = NodePath("CollisionShape2D")
+metadata/_custom_type_script = "uid://crbyxy0dcb1fy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2035498355]
+shape = SubResource("CircleShape2D_bmbfq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=853925225]
+self_modulate = Color(0.20133334, 0.4209078, 0.9187764, 1)
+scale = Vector2(1.1132813, 1.1132813)
+texture = ExtResource("2_b66yr")

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://diyshmh6y345k"]
+
+[ext_resource type="PackedScene" uid="uid://n0m7ioejta83" path="res://scenes/cutscenes/base.tscn" id="1_rgao7"]
+[ext_resource type="PackedScene" uid="uid://2dwixrvpwldu" path="res://scenes/cutscenes/dialog_box.tscn" id="2_lautf"]
+
+[node name="Base" unique_id=481378867 instance=ExtResource("1_rgao7")]
+
+[node name="DialogBox2" parent="." index="1" unique_id=1224712469 instance=ExtResource("2_lautf")]
+offset_left = 72.0
+offset_top = 53.0
+offset_right = 955.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 54
+text = "THE VAULT HAS AN ODD METHOD
+OF UNLOCKING IT"
+
+[node name="DialogBox3" parent="." index="2" unique_id=21925218 instance=ExtResource("2_lautf")]
+offset_left = 211.0
+offset_top = 215.0
+offset_right = 1140.0
+offset_bottom = 372.0
+theme_override_font_sizes/font_size = 54
+text = "YOU WILL NEED TO GUIDE THE 
+BACKUP SUN THROUGH CHAMBERS"
+
+[node name="DialogBox4" parent="." index="3" unique_id=1251671480 instance=ExtResource("2_lautf")]
+offset_left = 28.0
+offset_top = 380.0
+offset_right = 957.0
+offset_bottom = 537.0
+theme_override_font_sizes/font_size = 54
+text = "SPIN THIS VALVE TO SPIN THE CHAMBER.
+YOU CANNOT CONTROL THE SUN DIRECTLY"

@@ -1,31 +1,134 @@
 [gd_scene format=3 uid="uid://cghaqwx71e5ln"]
 
 [ext_resource type="Script" uid="uid://byjme6ym742cq" path="res://scripts/main_menu/play_button.gd" id="1_0ebjn"]
+[ext_resource type="Texture2D" uid="uid://cbx45afh5p11y" path="res://assets/textures/nightSky.png" id="1_5seab"]
 [ext_resource type="Script" uid="uid://cni86lq8jo31s" path="res://scripts/main_menu/licenses.gd" id="1_fsom3"]
+[ext_resource type="Texture2D" uid="uid://cusec7k8vhnyn" path="res://assets/textures/menuSun.png" id="3_ob46e"]
+[ext_resource type="Texture2D" uid="uid://mymu81hpqota" path="res://assets/textures/earth.png" id="4_uqeha"]
+[ext_resource type="Script" uid="uid://dtr1pu0bvvx7" path="res://scripts/main_menu/animation_player.gd" id="5_wem23"]
+[ext_resource type="Texture2D" uid="uid://bsbccon3nsft2" path="res://assets/textures/son.png" id="6_3ovsr"]
+[ext_resource type="AudioStream" uid="uid://bki8ehbiff2l1" path="res://assets/audio/music/menuMusic.wav" id="8_4xg86"]
+[ext_resource type="Texture2D" uid="uid://d2ht6ai4hbopr" path="res://assets/textures/title.png" id="9_thkx5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b6gl"]
 bg_color = Color(0.27899078, 0.27899086, 0.27899072, 0.64705884)
 
+[sub_resource type="Animation" id="Animation_uqeha"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Earth:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(583, 285)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_wem23"]
+resource_name = "loop"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Earth:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.52, 1.03, 1.43, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(452, 290.00003), Vector2(771, 65), Vector2(1112.9999, 272), Vector2(755, 579), Vector2(452, 290.00003)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.59, 0.91),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.5707964, 2.872812, 4.5762534]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ovsr"]
+_data = {
+&"RESET": SubResource("Animation_uqeha"),
+&"loop": SubResource("Animation_wem23")
+}
+
 [node name="MainMenu" type="Node2D" unique_id=159842324]
+
+[node name="NightSky" type="Sprite2D" parent="." unique_id=1801157971]
+position = Vector2(585.5, 318.5)
+scale = Vector2(1.0217013, 1.0354939)
+texture = ExtResource("1_5seab")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=745719583]
 
 [node name="Button" type="Button" parent="CanvasLayer" unique_id=196339561]
-offset_right = 286.0
-offset_bottom = 60.0
+offset_left = 460.0
+offset_top = 502.0
+offset_right = 746.0
+offset_bottom = 562.0
 text = "play the game"
 script = ExtResource("1_0ebjn")
 
-[node name="Licenses" type="RichTextLabel" parent="CanvasLayer" unique_id=80129175]
-anchors_preset = 3
-anchor_left = 1.0
+[node name="Licenses" type="RichTextLabel" parent="CanvasLayer" unique_id=80129175 node_paths=PackedStringArray("play_button")]
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -386.0
-offset_top = -400.0
-grow_horizontal = 0
+offset_top = -184.0
+offset_right = 312.0
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_1b6gl")
 text = "LOADING LICENSES..."
 script = ExtResource("1_fsom3")
+play_button = NodePath("../Button")
+
+[node name="Sun" type="Sprite2D" parent="." unique_id=927041675]
+position = Vector2(773.25, 309.25006)
+scale = Vector2(2.117188, 2.117188)
+texture = ExtResource("3_ob46e")
+
+[node name="Earth" type="Sprite2D" parent="." unique_id=396398929]
+position = Vector2(583, 285)
+scale = Vector2(3.044922, 3.044922)
+texture = ExtResource("4_uqeha")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1571861936]
+libraries/ = SubResource("AnimationLibrary_3ovsr")
+script = ExtResource("5_wem23")
+
+[node name="Son" type="Sprite2D" parent="." unique_id=804556092]
+position = Vector2(1149, 392)
+scale = Vector2(1.555, 1.5000001)
+texture = ExtResource("6_3ovsr")
+flip_h = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1137166264]
+stream = ExtResource("8_4xg86")
+autoplay = true
+
+[node name="Title" type="Sprite2D" parent="." unique_id=842804226]
+position = Vector2(279, 177)
+scale = Vector2(0.5625001, 0.87499994)
+texture = ExtResource("9_thkx5")

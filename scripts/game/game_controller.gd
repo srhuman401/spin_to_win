@@ -1,10 +1,14 @@
 class_name GameController
 extends Node2D
 
-const MAX_ROTATION_SPEED: float = 10
+signal progress_to_next_level
+
+const MAX_ROTATION_SPEED: float = 5
 
 @export var sun_scene: PackedScene
 @export var chamber_spawn: Marker2D
+@export var intro_cutscene: CutscenePlayer
+@export var gui: CanvasLayer
 
 var current_chamber_path: String = "none"
 var current_chamber: PuzzleChamber
@@ -59,16 +63,30 @@ func rotate_chamber(speed: float = 0.0):
 		MAX_ROTATION_SPEED
 	)
 
+func restart_chamber():
+	load_chamber(current_chamber_path)
+
 func _ready():
 	GameMgr.controller = self
-	load_chamber("level_test.tscn")
-
-func _physics_process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_RIGHT):
-		if current_chamber != null:
-			current_chamber.rotating_root.rotate(.7 * delta)
+	
+	gui.visible = false
+	
+	intro_cutscene.play()
+	await intro_cutscene.cutscene_ended
+	
+	gui.visible = true
+	
+	for level_path in GameMgr.order.level_paths:
+		load_chamber(level_path)
+		await progress_to_next_level
+	
+	get_tree().change_scene_to_file("res://scenes/game/ending.tscn")
 
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed('SKIP'):
+		progress_to_next_level.emit()
+
+func _physics_process(delta: float) -> void:
 	if current_chamber && current_chamber.rotating_root:
 		current_chamber.rotating_root.rotation += current_rotation_speed * delta
 		current_rotation_speed = move_toward(current_rotation_speed, 0, 10 * delta)

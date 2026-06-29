@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://d0cxtfjn6unlp"]
+
+[ext_resource type="PackedScene" uid="uid://n0m7ioejta83" path="res://scenes/cutscenes/base.tscn" id="1_undm7"]
+[ext_resource type="PackedScene" uid="uid://2dwixrvpwldu" path="res://scenes/cutscenes/dialog_box.tscn" id="2_ukncl"]
+
+[node name="Base" unique_id=481378867 instance=ExtResource("1_undm7")]
+
+[node name="DialogBox" parent="." index="1" unique_id=21925218 instance=ExtResource("2_ukncl")]
+offset_left = 135.0
+offset_top = 43.0
+offset_right = 388.0
+offset_bottom = 175.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 92
+text = " SON."
+
+[node name="DialogBox2" parent="." index="2" unique_id=1224712469 instance=ExtResource("2_ukncl")]
+offset_left = 744.0
+offset_top = 63.0
+offset_right = 1001.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 54
+text = "WAKE UP."
+
+[node name="DialogBox3" parent="." index="3" unique_id=1455928354 instance=ExtResource("2_ukncl")]
+offset_left = 35.0
+offset_top = 249.0
+offset_right = 524.0
+offset_bottom = 329.0
+theme_override_font_sizes/font_size = 54
+text = "THE SUN IS DYING."
+
+[node name="DialogBox3" parent="DialogBox3" index="0" unique_id=1959965868 instance=ExtResource("2_ukncl")]
+layout_mode = 0
+offset_left = 521.0
+offset_top = -37.0
+offset_right = 1090.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 54
+text = "WE NEED TO REPLACE
+IT"
+
+[node name="DialogBox4" parent="DialogBox3" index="1" unique_id=1868418138 instance=ExtResource("2_ukncl")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 188.0
+offset_right = 582.0
+offset_bottom = 345.0
+theme_override_font_sizes/font_size = 54
+text = "WE HAVE A BACKUP IN THE VAULT.
+COME WITH ME."

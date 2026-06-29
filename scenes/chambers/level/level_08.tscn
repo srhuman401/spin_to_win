@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://beuyaw8c8iy2l"]
+
+[ext_resource type="PackedScene" uid="uid://5e0bn5vvyyxo" path="res://scenes/game/puzzle/base_chamber.tscn" id="1_g0g2b"]
+[ext_resource type="PackedScene" uid="uid://3q7rax5afr58" path="res://scenes/game/puzzle/chamber_prefabs/wall.tscn" id="2_r8uag"]
+[ext_resource type="Script" uid="uid://8w26g5c71kq5" path="res://scripts/game/camera.gd" id="3_r8uag"]
+
+[node name="BaseChamber" unique_id=656397598 instance=ExtResource("1_g0g2b")]
+
+[node name="Geometry" parent="." index="0" unique_id=191963552]
+position = Vector2(0, -425)
+
+[node name="Exit" parent="Geometry" index="0" unique_id=889368385]
+position = Vector2(341, 556)
+
+[node name="Wall2" parent="Geometry" index="1" unique_id=295078828 instance=ExtResource("2_r8uag")]
+position = Vector2(-287, 25)
+wall_width = 25.845
+wall_height = 1200.0
+
+[node name="Wall5" parent="Geometry" index="2" unique_id=1449701057 instance=ExtResource("2_r8uag")]
+position = Vector2(288, -171)
+wall_width = 25.845
+wall_height = 825.945
+
+[node name="Wall4" parent="Geometry" index="3" unique_id=1839173589 instance=ExtResource("2_r8uag")]
+position = Vector2(0, 612.485)
+wall_width = 600.0
+wall_height = 25.0
+
+[node name="Wall6" parent="Geometry" index="4" unique_id=797778197 instance=ExtResource("2_r8uag")]
+position = Vector2(1, -579)
+wall_width = 601.25
+wall_height = 25.0
+
+[node name="Wall3" parent="Geometry" index="5" unique_id=1657263904 instance=ExtResource("2_r8uag")]
+position = Vector2(288, 378.145)
+wall_width = 25.845
+wall_height = 293.56
+
+[node name="Label" type="Label" parent="Geometry" index="6" unique_id=500173811]
+offset_left = -160.0
+offset_top = 363.0
+offset_right = 271.0
+offset_bottom = 412.0
+text = "thanks for playtesting! (this does not represent the final
+version)"
+
+[node name="Label2" type="Label" parent="Geometry" index="7" unique_id=1324232494]
+offset_left = -299.0
+offset_top = -644.0
+offset_right = 140.0
+offset_bottom = -589.0
+text = "Right click and move your mouse to pan the camera."
+
+[node name="Start" parent="." index="1" unique_id=424284006]
+position = Vector2(-232, -945)
+
+[node name="PuzzleCamera2D" type="Camera2D" parent="." index="3" unique_id=686493741]
+position = Vector2(-217, -937)
+script = ExtResource("3_r8uag")
+free_camera_enabled = true
+metadata/_custom_type_script = "uid://8w26g5c71kq5"

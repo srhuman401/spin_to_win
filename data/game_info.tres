@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GameOrder" format=3 uid="uid://iu0vgu56oot3"]
+
+[ext_resource type="Script" uid="uid://d3evdmvi8m5ra" path="res://scripts/resource/game_order.gd" id="1_8ot0k"]
+
+[resource]
+script = ExtResource("1_8ot0k")
+level_paths = Array[String](["level/level_01.tscn", "level/level_02.tscn", "level/level_03.tscn", "level/level_04.tscn", "level/level_05.tscn", "level/level_06.tscn", "level/level_07.tscn"])
+metadata/_custom_type_script = "uid://d3evdmvi8m5ra"

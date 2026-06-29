@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CutsceneData" format=3 uid="uid://82k0bt6c6oa4"]
+
+[ext_resource type="Script" uid="uid://bs0g7243nji7j" path="res://scripts/resource/cutscene/cutscene_frame.gd" id="1_3mgqe"]
+[ext_resource type="PackedScene" uid="uid://d0cxtfjn6unlp" path="res://scenes/cutscenes/frames/intro_01.tscn" id="2_kshq3"]
+[ext_resource type="Script" uid="uid://b4ispbpne3wnv" path="res://scripts/resource/cutscene/cutscene_data.gd" id="2_y1h0n"]
+[ext_resource type="PackedScene" uid="uid://diyshmh6y345k" path="res://scenes/cutscenes/frames/intro_02.tscn" id="3_dtlm2"]
+[ext_resource type="PackedScene" uid="uid://ol8jqw2lftyg" path="res://scenes/cutscenes/frames/intro_03.tscn" id="4_ilvyw"]
+
+[sub_resource type="Resource" id="Resource_xn837"]
+script = ExtResource("1_3mgqe")
+visual = ExtResource("2_kshq3")
+metadata/_custom_type_script = "uid://bs0g7243nji7j"
+
+[sub_resource type="Resource" id="Resource_klu3i"]
+script = ExtResource("1_3mgqe")
+visual = ExtResource("3_dtlm2")
+metadata/_custom_type_script = "uid://bs0g7243nji7j"
+
+[sub_resource type="Resource" id="Resource_qje2r"]
+script = ExtResource("1_3mgqe")
+visual = ExtResource("4_ilvyw")
+metadata/_custom_type_script = "uid://bs0g7243nji7j"
+
+[resource]
+script = ExtResource("2_y1h0n")
+frames = Array[ExtResource("1_3mgqe")]([SubResource("Resource_xn837"), SubResource("Resource_klu3i"), SubResource("Resource_qje2r")])
+metadata/_custom_type_script = "uid://b4ispbpne3wnv"
